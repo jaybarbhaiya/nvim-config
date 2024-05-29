@@ -3,7 +3,7 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -12,10 +12,10 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
-          "rust_analyzer"
-        }
+          "rust_analyzer",
+        },
       })
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -25,12 +25,12 @@ return {
       lspconfig.tsserver.setup({})
       lspconfig.rust_analyzer.setup({
         settings = {
-          ['rust-analyzer'] = {}
-        }
+          ["rust-analyzer"] = {},
+        },
       })
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
-    end
-  }
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+    end,
+  },
 }
