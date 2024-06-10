@@ -25,5 +25,6 @@ Install a [Nerd Font](https://www.nerdfonts.com/)
 1. rust-analyzer
 2. codelldb
 3. Prettier
-5. stylua
+4. stylua
+5. copilot - Follow the instructions documented [here](https://github.com/github/copilot.vim)
 
