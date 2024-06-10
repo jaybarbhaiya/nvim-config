@@ -26,5 +26,6 @@ Install a [Nerd Font](https://www.nerdfonts.com/)
 2. codelldb
 3. Prettier
 4. stylua
-5. copilot - Follow the instructions documented [here](https://github.com/github/copilot.vim)
+5. copilot
+> Note: to setup copilot, perform `:Copliot setup` in nvim
 
