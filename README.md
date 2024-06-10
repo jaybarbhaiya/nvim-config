@@ -20,3 +20,10 @@ Install [lazygit](https://github.com/jesseduffield/lazygit)
 
 Install a [Nerd Font](https://www.nerdfonts.com/)
 
+## Mason related dependencies
+
+1. rust-analyzer
+2. codelldb
+3. Prettier
+5. stylua
+
