@@ -26,6 +26,7 @@ Install a [Nerd Font](https://www.nerdfonts.com/)
 2. codelldb
 3. Prettier
 4. stylua
-5. copilot
+5. copilot (will be automatically installed by lazy.nvim)
 > Note: to setup copilot, perform `:Copliot setup` in nvim
+6. eslint_d
 
