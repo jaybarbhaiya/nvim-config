@@ -2,7 +2,7 @@ name: Validate YAML
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   validate_yaml:
