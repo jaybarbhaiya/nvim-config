@@ -35,6 +35,15 @@ return {
 					},
 				},
 			})
+			lspconfig.yamlls.setup({
+				settings = {
+					yaml = {
+						schemas = {
+							["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.yaml"] = "/*",
+						},
+					},
+				},
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>A", vim.lsp.buf.code_action, {})
