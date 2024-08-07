@@ -21,9 +21,17 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.tsserver.setup({})
-			lspconfig.rust_analyzer.setup({
+
+            lspconfig.lua_ls.setup({})
+
+            lspconfig.tsserver.setup({
+                filetypes = {
+                    "javascript",
+                    "typescript",
+                }
+            })
+
+            lspconfig.rust_analyzer.setup({
 				settings = {
 					["rust-analyzer"] = {
 						check = {
