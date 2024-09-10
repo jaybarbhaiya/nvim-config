@@ -6,6 +6,7 @@ vim.cmd("set clipboard+=unnamedplus") -- use the system clipboard
 vim.cmd("set smartindent")
 vim.cmd("set autoindent")
 vim.cmd("set relativenumber")
+vim.cmd("set nowrap")
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>bd", ":bd<CR>") -- close buffer
