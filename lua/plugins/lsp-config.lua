@@ -12,7 +12,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"rust_analyzer",
-                    "ts_ls"
+                    "ts_ls",
 				},
 			})
 		end,
@@ -24,12 +24,7 @@ return {
 
             lspconfig.lua_ls.setup({})
 
-            lspconfig.ts_ls.setup({
-                filetypes = {
-                    "javascript",
-                    "typescript",
-                }
-            })
+            lspconfig.ts_ls.setup({})
 
             lspconfig.rust_analyzer.setup({
 				settings = {
@@ -43,6 +38,7 @@ return {
 					},
 				},
 			})
+
 			lspconfig.yamlls.setup({
 				settings = {
 					yaml = {
@@ -52,6 +48,7 @@ return {
 					},
 				},
 			})
+
             lspconfig.pyright.setup({})
 
             -- Keymaps
