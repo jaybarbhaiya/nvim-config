@@ -12,7 +12,8 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"rust_analyzer",
-                    "ts_ls",
+					"tsserver",
+					"pyright",
 				},
 			})
 		end,
@@ -22,11 +23,11 @@ return {
 		config = function()
 			local lspconfig = require("lspconfig")
 
-            lspconfig.lua_ls.setup({})
+			lspconfig.lua_ls.setup({})
 
-            lspconfig.ts_ls.setup({})
+			lspconfig.tsserver.setup({})
 
-            lspconfig.rust_analyzer.setup({
+			lspconfig.rust_analyzer.setup({
 				settings = {
 					["rust-analyzer"] = {
 						check = {
@@ -39,20 +40,10 @@ return {
 				},
 			})
 
-			lspconfig.yamlls.setup({
-				settings = {
-					yaml = {
-						schemas = {
-							["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.yaml"] = "/*",
-						},
-					},
-				},
-			})
+			lspconfig.pyright.setup({})
 
-            lspconfig.pyright.setup({})
-
-            -- Keymaps
-            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
+			-- Keymaps
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>A", vim.lsp.buf.code_action, {})
